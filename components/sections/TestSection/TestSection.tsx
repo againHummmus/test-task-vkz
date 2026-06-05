@@ -92,7 +92,7 @@ export const TestSection = () => {
         scrollTrigger: {
           trigger: `.${styles.mediaWrapper}`,
           start: 'top bottom',
-          end: 'bottom 60%',
+          end: 'bottom bottom',
           scrub: 1,
         },
       })
