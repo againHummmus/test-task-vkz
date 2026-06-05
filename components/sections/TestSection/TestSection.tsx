@@ -23,7 +23,7 @@ export const TestSection = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top -5%',
-          end: '+=10%',
+          end: '+=5%',
           scrub: 2,
           invalidateOnRefresh: true,
         },
@@ -48,13 +48,12 @@ export const TestSection = () => {
         { yPercent: 0, scale: 1 },
         0
       )
-
       assembleTimeline.fromTo(`.${styles.tablet}`, { xPercent: 300 }, { xPercent: 0 }, 0)
 
       assembleTimeline.fromTo(
         `.${styles.title}, .${styles.description}`,
         { yPercent: 0, opacity: 1, lineHeight: 1.2 },
-        { yPercent: -10, opacity: 0, lineHeight: 1.4, ease: 'power2.out' },
+        { yPercent: -10, opacity: 0, lineHeight: 1.4, ease: 'power2.out', duration: 0.3 },
         0
       )
 
