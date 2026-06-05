@@ -76,6 +76,7 @@
   width: 100%;
   max-width: 80.375rem;
   aspect-ratio: 5 / 3;
+  will-change: transform;
 }
 
 .phone {
@@ -85,6 +86,7 @@
   left: 0;
   bottom: 0;
   filter: drop-shadow(15px 0 50px var(--color-shadow));
+  will-change: transform;
 }
 
 .desktop {
@@ -102,4 +104,5 @@
   right: 0;
   bottom: 0;
   filter: drop-shadow(-15px 0 50px var(--color-shadow));
+  will-change: transform;
 }

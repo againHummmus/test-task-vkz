@@ -23,10 +23,9 @@ export const TestSection = () => {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: 'top -5%',
-          end: '+=5%',
+          end: '+=10%',
           scrub: 2,
           invalidateOnRefresh: true,
-          markers: true,
         },
         defaults: {
           ease: 'power1.inOut',
@@ -68,8 +67,8 @@ export const TestSection = () => {
         },
       })
 
-      exitTimeline.to(`.${styles.phone}`, { yPercent: -150, ease: 'power1.outIn' }, 0)
-      exitTimeline.to(`.${styles.tablet}`, { yPercent: -200, ease: 'power1.outIn' }, 0)
+      exitTimeline.to(`.${styles.phone}`, { yPercent: -150, ease: 'power1.out', pointerEvents: 'none' }, 0)
+      exitTimeline.to(`.${styles.tablet}`, { yPercent: -200, ease: 'power1.out', pointerEvents: 'none' }, 0)
     })
 
     mediaQueries.add('(max-width: 767px)', () => {
@@ -112,7 +111,7 @@ export const TestSection = () => {
         0.2
       )
     })
-  })
+  }, { scope: sectionRef })
 
   return (
     <section ref={sectionRef} className={styles.section}>
